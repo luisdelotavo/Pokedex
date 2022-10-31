@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SE 3316 Lab 1</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  
+<!-- Place your content here -->
+  <div class="header"> <img src ="assets/extras/title.png" alt=""> </div>
+
+  <div id = "searchDiv" class = "searchDiv2">
+  <form class ="first"> 
+    <input type="text" placeholder="Search by number..." id="searchByNumber" onkeyup="searchDynamicNumber()">
+    <button type="submit" id="submitNumber"> <img src="assets/extras/searchButton.png" alt=""> </button>
+  </form>
+
+  <form class ="second"> 
+    <input type="text" placeholder="Search by name..." id="searchByName" onkeyup="searchDynamicName()">
+    <button type="submit" id="submitName"> <img src="assets/extras/searchButton.png" alt=""> </button>
+  </form>
+  </div>
+
+  <ul id="pokemonCards">
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front grass"> <img src ="assets/pokemon/1.png" alt=""> <p class="lowering"> #001 Bulbasaur </p> </div>
+        <div class="card-back grass"> Type: Grass, Poison <br> Category: Seed <br> Abilities: Overgrow </div>
+      </div>
+    </li>
+  
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front grass"> <img src ="assets/pokemon/2.png" alt=""> <p class="lowering"> #002 Ivysaur </p> </div>
+        <div class="card-back grass"> Type: Grass, Poison <br> Category: Seed <br> Abilities: Overgrow </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front grass"> <img src ="assets/pokemon/3.png" alt=""> <p class="lowering"> #003 Venusaur </p> </div>
+        <div class="card-back grass"> Type: Grass, Poison <br> Category: Seed <br> Abilities: Overgrow </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front fire"> <img src ="assets/pokemon/4.png" alt=""> <p class="lowering"> #004 Charmander </p> </div>
+        <div class="card-back fire"> Type: Fire <br> Category: Lizard <br> Abilities: Blaze </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front fire"> <img src ="assets/pokemon/5.png" alt=""> <p class="lowering"> #005 Charmeleon </p> </div>
+        <div class="card-back fire"> Type: Fire <br> Category: Flame <br> Abilities: Blaze </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front fire"> <img src ="assets/pokemon/6.png" alt=""> <p class="lowering"> #006 Charizard </p> </div>
+        <div class="card-back fire"> Type: Fire, Flying <br> Category: Flame <br> Abilities: Blaze </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front water"> <img src ="assets/pokemon/7.png" alt=""> <p class="lowering"> #007 Squirtle </p> </div>
+        <div class="card-back water"> Type: Water <br> Category: Tiny Turtle <br> Abilities: Torrent </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front water"> <img src ="assets/pokemon/8.png" alt=""> <p class="lowering"> #008 Wartortle </p> </div>
+        <div class="card-back water"> Type: Water <br> Category: Turtle <br> Abilities: Torrent </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front water"> <img src ="assets/pokemon/9.png" alt=""> <p class="lowering"> #009 Blastoise </p> </div>
+        <div class="card-back water"> Type: Water <br> Category: Shellfish <br> Abilities: Torrent </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front bug"> <img src ="assets/pokemon/10.png" alt=""> <p class="lowering"> #010 Caterpie </p> </div>
+        <div class="card-back bug"> Type: Bug <br> Category: Worm <br> Abilities: Shield Dust </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front bug"> <img src ="assets/pokemon/11.png" alt=""> <p class="lowering"> #011 Metapod </p> </div>
+        <div class="card-back bug"> Type: Bug <br> Category: Cocoon <br> Abilities: Shed Skin </div>
+      </div>
+    </li>
+  
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front bug"> <img src ="assets/pokemon/12.png" alt=""> <p class="lowering"> #012 Butterfree </p> </div>
+        <div class="card-back bug"> Type: Bug, Flying <br> Category: Butterfly <br> Abilities: Compound Eyes </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front bug"> <img src ="assets/pokemon/13.png" alt=""> <p class="lowering"> #013 Weedle </p> </div>
+        <div class="card-back bug"> Type: Bug, Poison <br> Category: Hairy Bug <br> Abilities: Shield Dust </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front bug"> <img src ="assets/pokemon/14.png" alt=""> <p class="lowering"> #014 Kakuna </p> </div>
+        <div class="card-back bug"> Type: Bug, Poison <br> Category: Cocoon <br> Abilities: Shed Skin </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front bug"> <img src ="assets/pokemon/15.png" alt=""> <p class="lowering"> #015 Beedrill </p> </div>
+        <div class="card-back bug"> Type: Bug, Poison <br> Category: Poison Bee <br> Abilities: Swarm </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front normal"> <img src ="assets/pokemon/16.png" alt=""> <p class="lowering"> #016 Pidgey </p> </div>
+        <div class="card-back normal"> Type: Normal, Flying <br> Category: Tiny Bird <br> Abilities: Keen Eye, Tangled Feet </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front normal"> <img src ="assets/pokemon/17.png" alt=""> <p class="lowering"> #017 Pidgeotto </p> </div>
+        <div class="card-back normal"> Type: Normal, Flying <br> Category: Bird <br> Abilities: Keen Eye, Tangled Feet </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front normal"> <img src ="assets/pokemon/18.png" alt=""> <p class="lowering"> #018 Pidgeot </p> </div>
+        <div class="card-back normal"> Type: Normal, Flying <br> Category: Bird <br> Abilities: Keen Eye, Tangled Feet </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front normal"> <img src ="assets/pokemon/19.png" alt=""> <p class="lowering"> #019 Rattata </p> </div>
+        <div class="card-back normal"> Type: Normal <br> Category: Mouse <br> Abilities: Run Away, Guts </div>
+      </div>
+    </li>
+
+    <li class="flip-card-container">
+      <div class="flip-card"> 
+        <div class="card-front normal"> <img src ="assets/pokemon/20.png" alt=""> <p class="lowering"> #020 Raticate </p> </div>
+        <div class="card-back normal"> Type: Normal <br> Category: Mouse <br> Abilities: Run Away, Guts </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <p class="references"> Pokemon data set from <a href="url"> https://www.kaggle.com/kvpratama/pokemon-images-dataset </a> <br> </p>
+  <p class="references1"> Pokemon excel from <a href="url"> https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/ </a> </p>
+
+<!-- Embedded JavaScript go here -->
+
+  <script src="script.js"> </script>
+</body>
+</html>
